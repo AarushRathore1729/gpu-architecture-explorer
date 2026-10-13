@@ -1,6 +1,6 @@
 # GPU Architecture Explorer
 
-[Live interactive demo](https://gpu-architecture-explorer-aarush.socialhill32.chatgpt.site) · [Verified A100 results](results/20261013_015204/run.json)
+[Live interactive demo](https://aarushrathore1729.github.io/gpu-architecture-explorer/) · [Verified A100 results](results/20261013_015204/run.json)
 
 A reproducible single-GPU characterization suite connecting **dense GEMM, memory streaming, access stride, and reductions** with empirical rooflines and transparent runtime estimates.
 
