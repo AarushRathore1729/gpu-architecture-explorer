@@ -137,7 +137,14 @@ $("load-main").addEventListener("click",()=>$("import-file").click());$("downloa
 for(const id of ["search","category","role"])$(id).addEventListener(id==="search"?"input":"change",table);
 document.querySelectorAll("[data-tab]").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll("[data-tab]").forEach(x=>x.classList.toggle("active",x===b));document.querySelectorAll(".tabs-section").forEach(x=>x.classList.toggle("active",x.id===`section-${b.dataset.tab}`));}));
 document.querySelectorAll("[data-sort]").forEach(h=>h.addEventListener("click",()=>{state.direction=state.sort===h.dataset.sort?-state.direction:1;state.sort=h.dataset.sort;table();}));
-try{const embedded=JSON.parse($("embedded-data").textContent);if(embedded)state.data=check(embedded);}catch(error){if($("embedded-data").textContent.trim()!=="__DATA_JSON__")fail("Embedded data could not be loaded: "+error.message);}
+try {
+  const raw = $("embedded-data").textContent.trim();
+  if (raw.startsWith("{")) {
+    state.data = check(JSON.parse(raw));
+  }
+} catch (error) {
+  fail("Embedded data could not be loaded: " + error.message);
+}
 render();
 </script>
 </body></html>
