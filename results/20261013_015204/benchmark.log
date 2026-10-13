@@ -1,0 +1,115 @@
+[01] launch_fill_one
+     1.74 us; 0.0 effective GB/s; validated
+[02] copy_256mib
+     387.43 us; 1385.7 effective GB/s; validated
+[03] gemm_float32_ieee_4096x4096x4096
+     7254.89 us; 27.8 effective GB/s; validated
+[04] gemm_float32_ieee_256x256x256
+     9.57 us; 82.1 effective GB/s; validated
+[05] gemm_float32_ieee_512x512x512
+     26.16 us; 120.2 effective GB/s; validated
+[06] gemm_float32_ieee_1024x1024x1024
+     129.28 us; 97.3 effective GB/s; validated
+[07] gemm_float32_ieee_2048x2048x2048
+     974.23 us; 51.7 effective GB/s; validated
+[08] gemm_float32_ieee_2048x128x1024
+     47.10 us; 211.5 effective GB/s; validated
+[09] gemm_float16_4096x4096x4096
+     512.56 us; 196.4 effective GB/s; validated
+[10] gemm_float16_256x256x256
+     4.35 us; 90.4 effective GB/s; validated
+[11] gemm_float16_512x512x512
+     6.86 us; 229.3 effective GB/s; validated
+[12] gemm_float16_1024x1024x1024
+     15.21 us; 413.7 effective GB/s; validated
+[13] gemm_float16_2048x2048x2048
+     72.24 us; 348.3 effective GB/s; validated
+[14] gemm_float16_2048x128x1024
+     13.88 us; 359.0 effective GB/s; validated
+[15] gemm_float32_tf32_4096x4096x4096
+     1125.02 us; 179.0 effective GB/s; validated
+[16] gemm_float32_tf32_256x256x256
+     7.68 us; 102.4 effective GB/s; validated
+[17] gemm_float32_tf32_512x512x512
+     10.80 us; 291.2 effective GB/s; validated
+[18] gemm_float32_tf32_1024x1024x1024
+     32.51 us; 387.0 effective GB/s; validated
+[19] gemm_float32_tf32_2048x2048x2048
+     172.65 us; 291.5 effective GB/s; validated
+[20] gemm_float32_tf32_2048x128x1024
+     16.59 us; 600.5 effective GB/s; validated
+[21] gemm_bfloat16_4096x4096x4096
+     528.64 us; 190.4 effective GB/s; validated
+[22] gemm_bfloat16_256x256x256
+     5.53 us; 71.1 effective GB/s; validated
+[23] gemm_bfloat16_512x512x512
+     6.96 us; 225.9 effective GB/s; validated
+[24] gemm_bfloat16_1024x1024x1024
+     19.40 us; 324.2 effective GB/s; validated
+[25] gemm_bfloat16_2048x2048x2048
+     110.75 us; 227.2 effective GB/s; validated
+[26] gemm_bfloat16_2048x128x1024
+     8.96 us; 555.9 effective GB/s; validated
+[27] copy_4mib
+     3.84 us; 2184.5 effective GB/s; validated
+[28] axpy_4mib
+     4.35 us; 2891.3 effective GB/s; validated
+[29] copy_16mib
+     22.73 us; 1476.0 effective GB/s; validated
+[30] axpy_16mib
+     39.37 us; 1278.3 effective GB/s; validated
+[31] copy_64mib
+     99.53 us; 1348.5 effective GB/s; validated
+[32] axpy_64mib
+     149.81 us; 1343.9 effective GB/s; validated
+[33] copy_128mib
+     195.84 us; 1370.7 effective GB/s; validated
+[34] axpy_128mib
+     297.11 us; 1355.2 effective GB/s; validated
+[35] stride_1_block_128_64mib
+     102.20 us; 1313.3 effective GB/s; validated
+[36] stride_1_block_256_64mib
+     99.48 us; 1349.2 effective GB/s; validated
+[37] stride_1_block_512_64mib
+     99.38 us; 1350.6 effective GB/s; validated
+[38] stride_2_block_128_64mib
+     149.76 us; 896.2 effective GB/s; validated
+[39] stride_2_block_256_64mib
+     150.48 us; 891.9 effective GB/s; validated
+[40] stride_2_block_512_64mib
+     237.31 us; 565.6 effective GB/s; validated
+[41] stride_4_block_128_64mib
+     243.46 us; 551.3 effective GB/s; validated
+[42] stride_4_block_256_64mib
+     277.91 us; 482.9 effective GB/s; validated
+[43] stride_4_block_512_64mib
+     279.40 us; 480.4 effective GB/s; validated
+[44] stride_8_block_128_64mib
+     430.23 us; 312.0 effective GB/s; validated
+[45] stride_8_block_256_64mib
+     441.14 us; 304.3 effective GB/s; validated
+[46] stride_8_block_512_64mib
+     463.10 us; 289.8 effective GB/s; validated
+[47] stride_16_block_128_64mib
+     649.06 us; 206.8 effective GB/s; validated
+[48] stride_16_block_256_64mib
+     675.28 us; 198.8 effective GB/s; validated
+[49] stride_16_block_512_64mib
+     700.57 us; 191.6 effective GB/s; validated
+[50] reduce_pytorch_4mib
+     9.32 us; 450.1 effective GB/s; validated
+[51] reduce_triton_4mib
+     4.45 us; 942.1 effective GB/s; validated
+[52] reduce_pytorch_16mib
+     13.16 us; 1275.0 effective GB/s; validated
+[53] reduce_triton_16mib
+     7.32 us; 2292.6 effective GB/s; validated
+[54] reduce_pytorch_64mib
+     56.93 us; 1178.7 effective GB/s; validated
+[55] reduce_triton_64mib
+     50.89 us; 1319.3 effective GB/s; validated
+/usr/local/lib/python3.13/dist-packages/torch/profiler/profiler.py:224: UserWarning: Warning: Profiler clears events at the end of each cycle.Only events from the current cycle will be reported.To keep events across cycles, set acc_events=True.
+  _warn_once(
+
+55 validated measurements; 0 failures; status=completed
+Results: /content/gpu-architecture-explorer/results/20261013_015204/run.json

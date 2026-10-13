@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+*.egg-info/
+build/
+dist/
+.ipynb_checkpoints/
+.streamlit/secrets.toml
+results/*.tmp
+# Preserve measurement JSON/CSV, reports, and logs in committed results.

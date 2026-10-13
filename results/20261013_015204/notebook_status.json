@@ -1,0 +1,7 @@
+{
+  "test_exit_code": 0,
+  "benchmark_exit_code": 0,
+  "preset": "full",
+  "timing": "cuda_graph",
+  "run_tag": "20261013_015204"
+}

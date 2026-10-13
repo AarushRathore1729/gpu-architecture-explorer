@@ -1,0 +1,80 @@
+[01] launch_fill_one
+     1.59 us; 0.0 effective GB/s; validated
+[02] copy_256mib
+     389.12 us; 1379.7 effective GB/s; validated
+[03] gemm_float32_ieee_4096x4096x4096
+     7244.90 us; 27.8 effective GB/s; validated
+[04] gemm_float32_ieee_256x256x256
+     9.68 us; 81.3 effective GB/s; validated
+[05] gemm_float32_ieee_512x512x512
+     26.06 us; 120.7 effective GB/s; validated
+[06] gemm_float32_ieee_1024x1024x1024
+     128.51 us; 97.9 effective GB/s; validated
+[07] gemm_float32_ieee_2048x2048x2048
+     972.24 us; 51.8 effective GB/s; validated
+[08] gemm_float32_ieee_2048x128x1024
+     46.90 us; 212.4 effective GB/s; validated
+[09] gemm_float16_4096x4096x4096
+     534.48 us; 188.3 effective GB/s; validated
+[10] gemm_float16_256x256x256
+     4.15 us; 94.8 effective GB/s; validated
+[11] gemm_float16_512x512x512
+     6.55 us; 240.0 effective GB/s; validated
+[12] gemm_float16_1024x1024x1024
+     14.75 us; 426.7 effective GB/s; validated
+[13] gemm_float16_2048x2048x2048
+     71.94 us; 349.8 effective GB/s; validated
+[14] gemm_float16_2048x128x1024
+     13.52 us; 368.5 effective GB/s; validated
+[15] gemm_float32_tf32_4096x4096x4096
+     1112.37 us; 181.0 effective GB/s; validated
+[16] gemm_float32_tf32_256x256x256
+     7.53 us; 104.5 effective GB/s; validated
+[17] gemm_float32_tf32_512x512x512
+     10.55 us; 298.3 effective GB/s; validated
+[18] gemm_float32_tf32_1024x1024x1024
+     33.69 us; 373.5 effective GB/s; validated
+[19] gemm_float32_tf32_2048x2048x2048
+     174.23 us; 288.9 effective GB/s; validated
+[20] gemm_float32_tf32_2048x128x1024
+     16.28 us; 611.8 effective GB/s; validated
+[21] gemm_bfloat16_4096x4096x4096
+     509.34 us; 197.6 effective GB/s; validated
+[22] gemm_bfloat16_256x256x256
+     5.38 us; 73.1 effective GB/s; validated
+[23] gemm_bfloat16_512x512x512
+     6.86 us; 229.3 effective GB/s; validated
+[24] gemm_bfloat16_1024x1024x1024
+     18.94 us; 332.1 effective GB/s; validated
+[25] gemm_bfloat16_2048x2048x2048
+     109.16 us; 230.5 effective GB/s; validated
+[26] gemm_bfloat16_2048x128x1024
+     9.01 us; 552.7 effective GB/s; validated
+[27] copy_4mib
+     3.89 us; 2155.8 effective GB/s; validated
+[28] axpy_4mib
+     4.35 us; 2891.3 effective GB/s; validated
+[29] copy_16mib
+     22.68 us; 1479.4 effective GB/s; validated
+[30] axpy_16mib
+     39.37 us; 1278.3 effective GB/s; validated
+[31] copy_64mib
+     99.58 us; 1347.8 effective GB/s; validated
+[32] axpy_64mib
+     149.76 us; 1344.3 effective GB/s; validated
+[33] copy_128mib
+     195.89 us; 1370.3 effective GB/s; validated
+[34] axpy_128mib
+/pytorch/aten/src/ATen/native/cuda/IndexKernel.cu:111: operator(): block: [15,0,0], thread: [127,0,0] Assertion `-sizes[i] <= index && index < sizes[i] && "index out of bounds"` failed.
+     FAILED: AcceleratorError: CUDA error: device-side assert triggered
+Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+ERROR: CUDA error: device-side assert triggered
+Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+

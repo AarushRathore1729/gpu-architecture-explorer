@@ -1,0 +1,4 @@
+# Colab already supplies CUDA-enabled PyTorch and its matching Triton.
+# Do not replace that installation just to run these benchmarks.
+pytest>=8,<10
+# For the optional hosted app: pip install '.[dashboard]'

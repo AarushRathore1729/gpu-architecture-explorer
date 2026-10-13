@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gpu-architecture-explorer"
+version = "0.1.1"
+description = "GPU microbenchmarks, empirical rooflines, and held-out runtime estimates"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+dashboard = ["streamlit>=1.35,<2"]
+
+[project.scripts]
+gpu-arch-bench = "benchmarks.run:main"
+gpu-arch-report = "analysis.report:main"
+
+[tool.setuptools]
+packages = ["benchmarks", "kernels", "models", "profiling", "analysis", "dashboard"]
+
+[tool.setuptools.package-data]
+dashboard = ["viewer.html"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+markers = ["gpu: requires CUDA-enabled PyTorch and Triton"]

@@ -1,0 +1,72 @@
+{
+  "device": {
+    "name": "NVIDIA A100-SXM4-40GB",
+    "index": 0,
+    "compute_capability": "8.0",
+    "multiprocessors": 108,
+    "vram_bytes": 42405855232,
+    "torch_version": "2.11.0+cu130",
+    "cuda_runtime": "13.0",
+    "python_version": "3.13.15",
+    "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
+    "l2_cache_bytes": 41943040,
+    "triton_version": "3.6.0",
+    "nvidia_smi_before": "0, NVIDIA A100-SXM4-40GB, 580.82.07, 40960, 46, 1095, 1215, 57.89",
+    "nvidia_smi_after": "0, NVIDIA A100-SXM4-40GB, 580.82.07, 40960, 51, 1410, 1215, 126.47"
+  },
+  "calibration": {
+    "kind": "empirical_logical_byte_model",
+    "compute_tflops": {
+      "float32_ieee": 18.94432822103189,
+      "float16": 268.1405114280399,
+      "float32_tf32": 122.16604275518198,
+      "bfloat16": 259.98592160591926
+    },
+    "compute_sources": {
+      "float32_ieee": "gemm_float32_ieee_4096x4096x4096",
+      "float16": "gemm_float16_4096x4096x4096",
+      "float32_tf32": "gemm_float32_tf32_4096x4096x4096",
+      "bfloat16": "gemm_bfloat16_4096x4096x4096"
+    },
+    "compute_timing_methods": {
+      "float32_ieee": "cuda_graph",
+      "float16": "cuda_graph",
+      "float32_tf32": "cuda_graph",
+      "bfloat16": "cuda_graph"
+    },
+    "bandwidth_gbps": 1385.722194790937,
+    "bandwidth_source": "copy_256mib",
+    "bandwidth_timing_method": "cuda_graph",
+    "launch_floor_ms": 0.001740800030529499,
+    "launch_floor_timing_method": "cuda_graph",
+    "calibration_case_ids": [
+      "launch_fill_one",
+      "copy_256mib",
+      "gemm_float32_ieee_4096x4096x4096",
+      "gemm_float16_4096x4096x4096",
+      "gemm_float32_tf32_4096x4096x4096",
+      "gemm_bfloat16_4096x4096x4096"
+    ]
+  },
+  "prediction_summary": {
+    "available": true,
+    "count": 34,
+    "mape_percent": 41.308537810940464,
+    "median_ape_percent": 45.886839718065595,
+    "by_category": {
+      "gemm": {
+        "count": 20,
+        "mape_percent": 51.62051504774567
+      },
+      "memory": {
+        "count": 8,
+        "mape_percent": 23.69452450305388
+      },
+      "reduction": {
+        "count": 6,
+        "mape_percent": 30.420631432105218
+      }
+    },
+    "scoring": "Held-out configuration sizes from the same GPU session; not a cross-device model."
+  }
+}
